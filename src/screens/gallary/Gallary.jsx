@@ -49,17 +49,16 @@ function Gallary() {
 
   return (
     <>
-     
-      <div className="gallery my-5">
-        <div className="container ">
+      <div className="gallery">
+        <div className="container mx-auto ">
             <div className="title mx-auto d-flex flex-column align-items-center">
               <h1>My Gallary</h1>
             </div>
-          <div className="row gy-5 gx-3 mx-auto">
+          <div className="row g-5 mx-auto">
             <Uploadform />
             {docs &&
               docs.slice(pagination.start,pagination.end).map((doc, index) => (
-                <div className="col-md-4 mx-auto" key={doc.id}>
+                <div className="col-md-4 main__card mx-auto" key={doc.id}>
                   <div className="card" style={{ width: "21rem" , position : 'relative',margin: '0 auto'}}>
                    
                       <img

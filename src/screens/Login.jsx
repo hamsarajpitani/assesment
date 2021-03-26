@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import SignInScreen from "./SignInScreen";
-import SignUpscreen from "./SignUpscreen";
+
 
 const Login = () => {
 
