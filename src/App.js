@@ -12,6 +12,7 @@ import Todos from "./Todos";
 import Gallary from "./screens/gallary/Gallary";
 import Navbar from './Navbar';
 
+
 function App() {
   // let user = null;
   let user = useSelector(selectUser);
@@ -44,6 +45,7 @@ function App() {
         ) : (
           <>
         <Navbar/>
+       
           <Switch>
             <Route exact path="/profile">
               <ProfileScreen />

@@ -1,32 +1,33 @@
-
-.navbar{
-    font-family: 'Noto Sans JP', sans-serif;
-     padding: 0 .5rem;
-    background-color: rgba($color: #000000, $alpha: .5);
-    backface-visibility: hidden;
-    backdrop-filter: blur(10px);
-    
+.navbar {
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 0 0.5rem;
+  background-color: rgba($color: #000000, $alpha: 1);
+  backface-visibility: hidden;
+  backdrop-filter: blur(10px);
 }
 
-.navbar-brand{
-    margin-left: 5px;
+.navbar-brand {
+  margin-left: 5px;
+  font-weight: 600;
+  img {
+    height: 40px;
+  }
 }
 
-.nav-link{
-    margin-right: .5rem;
-    text-transform: capitalize;
-   // font-family: 'Noto Sans JP', sans-serif;
-   // font-family: 'Josefin Sans', sans-serif;
-    //font-family: 'Poppins', sans-serif; 
-    font-weight: 500;
-    font-size: .9rem;
+.nav-link {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+
+  font-family: "Josefin Sans", sans-serif;
+
+  font-weight: 600;
+  font-size: 1.1 rem;
 }
 
 // .active_menu{
 //     border: 2px solid white;
 // }
 
-.nav-link.active{
-    color: #fff; 
+.nav-link.active {
+  color: #fff;
 }
-

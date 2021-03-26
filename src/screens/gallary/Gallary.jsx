@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Pagination from "../../Pagination";
-import Image from "./Image";
+
 import Uploadform from "./Uploadform";
 import db from "../../firebase";
 import IconButton from "@material-ui/core/IconButton";

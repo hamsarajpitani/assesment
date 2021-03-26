@@ -7,16 +7,38 @@ const HomeScreen = () => {
     <div className="homescreen">
       <div className="container mt-5 text-capitalize">
         <div className="row">
-          <div className="col-10 mx-auto">
-            <div className="row text-center homescreen__body ">
+          <div className="col-10 mx-auto  homescreen__body">
+
+          <div className="row  ">
+              <div className="col ">
+                <h4 className="mt-5">About Project</h4>
+                <ol className="">
+                  <li>Used Firebase For Gallary </li>
+                  <li>Authentication Done using firebase</li>
+                  <li>used Local Storage for user details</li>
+                  <li>used local storage for todo tasks</li>
+                </ol>
+              </div>
+             
+            </div>
+            <hr/>
+            <div className="row text-center ">
+              <div className="col mx-auto homescreen__img ">
+                <h4 className="mt-5">Carrer Goal</h4>
+                <img   className="image-fluid mt-2" src="https://upload.wikimedia.org/wikipedia/commons/9/94/MERN-logo.png" alt=""/>
+              </div>
+            </div>
+            <hr/>
+            <div className="row text-center  ">
               <div className="col mx-auto">
                 <h4 className="mt-5">github link</h4>
-                <a href="" >
+                <a href="https://github.com/hamsarajpitani/assesment" >
                   <i class="mt-4 fs-1 fab fa-github-alt "></i>
                 </a>
               </div>
              
             </div>
+
           </div>
         </div>
       </div>

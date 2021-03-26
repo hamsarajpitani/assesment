@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
       font-family: 'Josefin Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
+background-color: whitesmoke;
 }
 
 
@@ -12,6 +13,32 @@ font-family: 'Poppins', sans-serif;
     a{
         i{
             color: rgb(0, 0, 0) !important;
+        }
+    }
+
+    ul{
+        li{
+            opacity: .8;
+        }
+    }
+}
+
+.homescreen__img{
+
+
+    img{
+        height:15rem;
+        
+    }
+}
+
+@media (max-width:768px){
+    .homescreen__img{
+
+
+        img{
+            height:6rem;
+            
         }
     }
 }
