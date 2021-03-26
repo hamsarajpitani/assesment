@@ -1,0 +1,652 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&family=Poppins:wght@300;500;600;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.homescreen {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.homescreen__body a i {
+  color: black !important;
+}
+
+.navbar {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  margin-left: 5px;
+}
+
+.nav-link {
+  margin-right: .5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.nav-link.active {
+  color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.title h2, .title p {
+  text-align: center;
+}
+
+.title h2 {
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+.uploadicon {
+  position: fixed !important;
+  bottom: 50px;
+  right: 50px;
+  background-color: #3838ff !important;
+  color: white !important;
+  -webkit-box-shadow: 0px 5px 20px #4141d3 !important;
+          box-shadow: 0px 5px 20px #4141d3 !important;
+}
+
+.deleteicon {
+  background-color: rgba(78, 78, 78, 0.521) !important;
+  color: white !important;
+}
+
+.login {
+  color: white !important;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif !important;
+  background-image: url("https://source.unsplash.com/random");
+  background-image: 100% 100%;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login__background {
+  height: 100%;
+}
+
+.login__gradrient {
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+}
+
+.login__body {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 1rem auto;
+  font-weight: 900 !important;
+  min-width: 20rem;
+  padding: .1rem;
+  text-align: center;
+  text-transform: capitalize;
+  z-index: 15;
+}
+
+.login__body h1 {
+  font-weight: 700 !important;
+  font-size: 2.5rem;
+}
+
+.login__body__input {
+  border-radius: 5px;
+}
+
+.login__body__input input {
+  background-color: rgba(0, 0, 0, 0.493);
+  margin-right: 1rem;
+  border-radius: 5px !important;
+}
+
+.login__body__input input:focus {
+  background-color: rgba(0, 0, 0, 0.493);
+  color: white;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .login__body h1 {
+    font-weight: 700 !important;
+    font-size: 1.8rem;
+  }
+}
+
+.signinscreen {
+  padding: 1rem;
+}
+
+.signinscreen__card {
+  border-radius: 1rem;
+  background-color: rgba(19, 19, 19, 0.747) !important;
+  border-radius: 15px !important;
+  padding: 1rem 1.5rem;
+  min-height: 30rem;
+  -webkit-box-shadow: 0px 10px 20px rgba(17, 17, 17, 0.726);
+          box-shadow: 0px 10px 20px rgba(17, 17, 17, 0.726);
+  text-align: left;
+  font-weight: 400;
+  border: .1px solid white !important;
+}
+
+.signinscreen input {
+  background-color: rgba(51, 51, 51, 0.808) !important;
+}
+
+.signinscreen p {
+  opacity: .5;
+  text-transform: capitalize;
+  margin-right: 5px;
+  float: left;
+}
+
+.signinscreen button {
+  font-weight: 500;
+  width: 100%;
+}
+
+.signinscreen a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.signinscreen a:hover, .signinscreen a:focus {
+  color: #008bdb !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+input:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+input::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+input::placeholder {
+  color: #fff !important;
+}
+
+input, select, textarea {
+  color: #fff !important;
+}
+
+textarea:focus, input:focus {
+  color: #fff !important;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.h6, h6 {
+  font-size: .75rem !important;
+  font-weight: 500;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+.name h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-page .page-header {
+  height: 100vh;
+  background-position: center;
+  line-height: 0 !important;
+}
+
+.page-header {
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("https://source.unsplash.com/random");
+}
+
+.header-filter:after, .header-filter:before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.header-filter::before {
+  background: rgba(0, 0, 0, 0.336);
+}
+
+.main-raised {
+  margin: -290px auto 0 auto !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.048), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.048), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  background: #FFF;
+  position: relative;
+  z-index: 3;
+  width: 60%;
+  padding: 0 5    rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-page .profile {
+  text-align: center;
+}
+
+.profile-page .profile img {
+  max-width: 160px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.img-raised {
+  -webkit-box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  min-height: 32px;
+  color: #3C4858;
+  font-weight: 700;
+  font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+.profile-page .description {
+  margin: 1.071rem auto 0;
+  max-width: 600px;
+  color: #999;
+  font-weight: 300;
+}
+
+.profile-page .description > * {
+  margin-bottom: 5vh;
+}
+
+.profile-page .description p {
+  color: black;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profile-page .profile-tabs {
+  margin-top: 4.284rem;
+}
+
+.profile {
+  text-transform: capitalize;
+}
+
+.profile-page .gallery {
+  margin-top: 3.213rem;
+  padding-bottom: 50px;
+}
+
+.profile-page .gallery img {
+  width: 100%;
+  margin-bottom: 2.142rem;
+}
+
+.profile-page .profile .name {
+  margin-top: -80px;
+}
+
+img.rounded {
+  border-radius: 6px !important;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar .editicon {
+  position: absolute;
+  right: 10px;
+  bottom: 60px;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+}
+
+.profile-page .page-header {
+  height: 380px;
+  background-position: center;
+}
+
+.page-header {
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-filter:after, .header-filter:before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.header-filter::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main-raised {
+  margin: -60px 30px 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  background: #FFF;
+  position: relative;
+  z-index: 3;
+}
+
+.profile-page .profile {
+  text-align: center;
+}
+
+.profile-page .profile img {
+  max-width: 160px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.img-raised {
+  -webkit-box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  min-height: 32px;
+  color: #3C4858;
+  font-weight: 700;
+  font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+.profile-page .description {
+  margin: 1.071rem auto 0;
+  max-width: 600px;
+  color: #999;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.profile-page .profile-tabs {
+  margin-top: 4.284rem;
+}
+
+.profile-page .gallery {
+  margin-top: 3.213rem;
+  padding-bottom: 50px;
+}
+
+.profile-page .gallery img {
+  width: 100%;
+  margin-bottom: 2.142rem;
+}
+
+.profile-page .profile .name {
+  margin-top: -80px;
+}
+
+img.rounded {
+  border-radius: 6px !important;
+}
+
+#app {
+  font-family: "Source Code Pro";
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 0px auto;
+}
+
+.todo button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+.todo input {
+  font-family: "Source Code Pro";
+}
+
+.todo__date {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.todo__ctrls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.todo__ctrls input {
+  padding: 10px;
+  border: 2px solid black;
+  border-right: none;
+}
+
+.todo__ctrls input:focus {
+  outline: none;
+}
+
+.todo__ctrls input[type='text'] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  max-width: 150px;
+}
+
+.todo__ctrls input[type='date'] {
+  width: 120px;
+}
+
+.todo__ctrls button {
+  margin-left: 0px;
+  border-radius: 0px;
+}
+
+.todo__list {
+  border: 2px solid black;
+  border-top: none;
+  height: 400px;
+  overflow: hidden;
+  padding: 10px 25px 10px 7px;
+}
+
+.todo__list ul {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px 10px;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+.todo__completion {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.task__title {
+  margin-left: 7px;
+  padding: 4px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  max-width: 300px;
+}
+
+.task__status {
+  border: none !important;
+  padding: 0px;
+}
+
+.task__ctrls {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.task__ctrls button {
+  margin: 0px 2px;
+  padding: 2px;
+  border-radius: 50px;
+}
+
+.task__ctrls button i {
+  font-size: 15px;
+}
+
+.crossout {
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=main.css.map */
