@@ -1,17 +1,23 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable no-unused-vars */
 import { React, useState } from "react";
-import { IconButton } from "@material-ui/core";
+import { IconButton, TextField } from "@material-ui/core";
 import { auth, storage } from "../firebase";
 import { selectUser } from "../features/userSlice";
 import { useSelector } from "react-redux";
 import EditRoundedIcon from "@material-ui/icons/EditRounded";
 import Button from "@material-ui/core/Button";
+import Input from "@material-ui/core/Input";
 
+import CheckIcon from "@material-ui/icons/Check";
 const ProfileScreen = () => {
   const [profile, setProfile] = useState("");
+  const [Password, setPassword] = useState("");
+  const [success, setSuccess] = useState(null);
   const user = useSelector(selectUser);
-  // console.log(user);
+  const Currentuser = auth.currentUser;
+
+  console.log(Currentuser);
 
   // Retrieve the object from storage
   const UserData = localStorage.getItem("UserObject");
@@ -46,11 +52,30 @@ const ProfileScreen = () => {
   };
   const profileURL = localStorage.getItem("profileURL");
 
-  console.log(profileURL);
+  // console.log(profileURL);
   const handleEdit = () => {
     const fileinput = document.getElementById("imageinput");
     fileinput.click();
   };
+
+  const handlepassword = (e) => {
+    setPassword(e.target.value);
+  };
+  
+  const changepassword = () => {
+    Currentuser.updatePassword(Password)
+      .then(() => {
+          setSuccess("success");
+        setTimeout(() => {
+           setSuccess(null); 
+           setPassword('');
+        }, 2000);    
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div class="profile-page">
       <div class="page-header header-filter" data-parallax="true"></div>
@@ -70,6 +95,7 @@ const ProfileScreen = () => {
                       alt="Circle Image"
                       class="img-raised rounded-circle img-fluid profileimage"
                     />
+
                     <input
                       type="file"
                       name=""
@@ -107,20 +133,40 @@ const ProfileScreen = () => {
                     >
                       <i class="fa fa-pinterest"></i>
                     </a>
+                    <h5 className="mt-4 fs-6 fw-bolder">Change password</h5>
+                    {success && (
+                      <div class="alert alert-success" role="alert">
+                        Change Success
+                      </div> 
+                    )}
+                    <TextField
+                      name="confirmPassword"
+                      type="password"
+                      label="confirm password"
+                      value={Password}
+                      onChange={handlepassword}
+                    />
+                    <Button
+                      onClick={changepassword}
+                      className="float-start mx-auto"
+                      variant="contained"
+                      color="primary"
+                    >
+                      <CheckIcon />
+                    </Button>
                   </div>
                 </div>
               </div>
               <div class="description col-md-9 mx-auto  text-capitalize fw-bol">
-                <h1 className="mb-0 fs-6 fw-bolder">username</h1> <br/>
+                <h1 className="mb-0 fs-6 fw-bolder">username</h1> <br />
                 <p className="float-start">{firstname}</p>
                 <p className="">{lastname}</p>
-                <h1 className="mb-0 fs-6 fw-bolder">Email address</h1> <br/>
+                <h1 className="mb-0 fs-6 fw-bolder">Email address</h1> <br />
                 <p className="email ">{user.uemail}</p>
-                <h1 className="mb-0 fs-6 fw-bolder">date of birth</h1> <br/>
+                <h1 className="mb-0 fs-6 fw-bolder">date of birth</h1> <br />
                 <p className="">{dob}</p>
-                <h1 className="mb-0 fs-6 fw-bolder">phone number</h1> <br/>
+                <h1 className="mb-0 fs-6 fw-bolder">phone number</h1> <br />
                 <p className="">{phonenumber}</p>
-
                 <Button
                   onClick={() => auth.signOut()}
                   variant="contained"

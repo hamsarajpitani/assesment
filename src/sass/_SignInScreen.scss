@@ -35,15 +35,15 @@
             color: rgb(0, 139, 219) !important;
         }
     }
-}
-input::placeholder{
-    color: #fff !important;
-}
-
-input, select, textarea{
-    color: #fff !important;
-}
-
-textarea:focus, input:focus {
-    color: #fff !important;
+    input::placeholder{
+        color: #fff !important;
+    }
+    
+    input, select, textarea{
+        color: #fff !important;
+    }
+    
+    textarea:focus, input:focus {
+        color: #fff !important;
+    }
 }

@@ -392,27 +392,27 @@ body {
   color: #008bdb !important;
 }
 
-input::-webkit-input-placeholder {
+.signinscreen input::-webkit-input-placeholder {
   color: #fff !important;
 }
 
-input:-ms-input-placeholder {
+.signinscreen input:-ms-input-placeholder {
   color: #fff !important;
 }
 
-input::-ms-input-placeholder {
+.signinscreen input::-ms-input-placeholder {
   color: #fff !important;
 }
 
-input::placeholder {
+.signinscreen input::placeholder {
   color: #fff !important;
 }
 
-input, select, textarea {
+.signinscreen input, .signinscreen select, .signinscreen textarea {
   color: #fff !important;
 }
 
-textarea:focus, input:focus {
+.signinscreen textarea:focus, .signinscreen input:focus {
   color: #fff !important;
 }
 
