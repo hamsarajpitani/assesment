@@ -1,4 +1,7 @@
 ![Screenshot_20210326_152934](https://user-images.githubusercontent.com/33552374/112615188-2edda800-8e48-11eb-887a-bf8c7e446bcd.png)
+![Screenshot_20210326_140353](https://user-images.githubusercontent.com/33552374/112615301-52a0ee00-8e48-11eb-8d59-da8ca89988c7.png)
+![Screenshot_20210326_140340](https://user-images.githubusercontent.com/33552374/112615307-53d21b00-8e48-11eb-8263-b3237e43f867.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
