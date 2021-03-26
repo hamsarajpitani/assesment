@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 
   import React from 'react';
-
+  import { IconButton } from '@material-ui/core';
+  import EditIcon from '@material-ui/icons/Edit';
+  import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+  
   class Todolist extends React.Component {
     constructor(props) {
       super(props);
@@ -148,11 +151,9 @@
               onDoneCallback={this.taskDoneHandler}
               onEditCallback={this.taskEditHandler}
               onDeleteCallback={this.taskDeleteHandler}
-            />
+            />  
           </div>
-          <div class="todo__completion">
-            Task Completion: {this.taskCompletion()}%
-          </div>
+        
         </div>
       );
     }
@@ -198,12 +199,12 @@
             {title}
           </div>
           <div class="task__ctrls">
-            <Button onClickHandler={this.clickEditHandler}>
-              <Icon>edit</Icon>
-            </Button>
-            <Button onClickHandler={this.clickDeleteHandler}>
-              <Icon>delete</Icon>
-            </Button>
+            <IconButton  onClickHandler={this.clickEditHandler}>
+            <EditIcon/>
+            </IconButton>
+            <IconButton onClickHandler={this.clickDeleteHandler}>
+            <DeleteForeverIcon/>
+            </IconButton>
           </div>
         </div>
       );
