@@ -48,10 +48,10 @@ function App() {
        
           <Switch>
             <Route exact path="/profile">
-              <ProfileScreen />
+              <ProfileScreen/>
             </Route>
             <Route exact path="/">
-              <HomeScreen />
+              <HomeScreen/>
             </Route>
             <Route exact path="/todos">
               <Todos/>
