@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Pagination from "../../Pagination";
-
 import Uploadform from "./Uploadform";
 import db from "../../firebase";
 import IconButton from "@material-ui/core/IconButton";
@@ -19,7 +18,6 @@ function Gallary() {
 
   const pics = () => {
     db.collection("gallary")
-      // .orderBy("createdAt", "desc")
       .onSnapshot((snap) => {
         db.collection("gallary")
           .orderBy("createdAt", "desc")
@@ -51,14 +49,17 @@ function Gallary() {
     <>
       <div className="gallery">
         <div className="container mx-auto ">
-            <div className="title mx-auto d-flex flex-column align-items-center">
+          <div className="row">
+            <div className="col-12 mx-auto">
+          <div className="title mx-auto mt-5 d-flex flex-column align-items-center">
               <h1>My Gallary</h1>
             </div>
+
           <div className="row g-5 mx-auto">
             <Uploadform />
             {docs &&
               docs.slice(pagination.start,pagination.end).map((doc, index) => (
-                <div className="col-md-4 main__card mx-auto" key={doc.id}>
+                <div className="col-md-4 main__card" key={doc.id}>
                   <div className="card" style={{ width: "21rem" , position : 'relative',margin: '0 auto'}}>
                    
                       <img
@@ -86,6 +87,9 @@ function Gallary() {
           onPaginationChange={onPaginationChange}
         />
           </div>
+            </div>
+          </div>
+            
         </div>
       </div>
     </>

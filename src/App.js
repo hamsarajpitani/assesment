@@ -8,10 +8,9 @@ import { auth } from "./firebase";
 import ProfileScreen from "./screens/ProfileScreen";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
-import Todos from "./Todos";
+
 import Gallary from "./screens/gallary/Gallary";
 import Navbar from "./Navbar";
-import Todolist from "./Todos.jsx";
 
 function App() {
   // let user = null;
@@ -91,16 +90,12 @@ function App() {
         ) : (
           <>
             <Navbar />
-
             <Switch>
               <Route exact path="/profile">
                 <ProfileScreen />
               </Route>
               <Route exact path="/">
                 <HomeScreen />
-              </Route>
-              <Route exact path="/todos">
-                <Todolist tasks={DATA} />
               </Route>
               <Route exact path="/gallary">
                 <Gallary />

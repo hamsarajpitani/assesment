@@ -12,10 +12,10 @@ const HomeScreen = () => {
               <div className="col ">
                 <h4 className="mt-5">About Project</h4>
                 <ol className="">
-                  <li>Used Firebase For Gallary </li>
-                  <li>Authentication Done using firebase</li>
-                  <li>used Local Storage for user details</li>
-                  <li>used local storage for todo tasks</li>
+                  <li>Used Firebase Storage For Gallary </li>
+                  <li>Authentication Done using firebase AUTH</li>
+                  <li>used Local Storage fors toreing user details</li>
+                  <li>used Formics & Yup for signup validation</li>
                 </ol>
               </div>
             </div>

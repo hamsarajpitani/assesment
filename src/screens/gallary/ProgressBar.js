@@ -3,7 +3,9 @@ import React,{useEffect} from "react";
 import useStorage from "./useStorage";
 
 const ProgressBar = ({ File, setFile }) => {
+
   //!! THIS WILL CALL the USESTORAGE
+  alert(File);
   const { url, progress } = useStorage(File);
   console.log(url, progress);
 
@@ -14,6 +16,7 @@ const ProgressBar = ({ File, setFile }) => {
         }
     }, [url,setFile])
 
+  
   return (
     <div>
       <div class="progress">
