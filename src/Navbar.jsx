@@ -2,8 +2,13 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 const Navbar = () => {
+  const history = useHistory();
+
+  const handleprofile = ()=>{
+    history.push('/profile')  
+  }
   return (
    
     <nav class="navbar sticky-top navbar-expand-lg  navbar-dark">
@@ -54,6 +59,7 @@ const Navbar = () => {
                 activeClassName="active_menu"
                 className="nav-link"
                 to="/profile"
+                onClick={()=>handleprofile}
               >
                 Profile
               </NavLink>
